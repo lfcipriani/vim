@@ -57,7 +57,7 @@ set nocompatible
 
     " New in 7.3 !
     if version >= 703
-        set autochdir               " always switch to the current file directory
+    "    set autochdir               " always switch to the current file directory, I dont want this
     endif
     if has('persistent_undo')
         set undofile                " keep a permanent undofile (vide :wundo/:rundo)
@@ -115,7 +115,7 @@ set nocompatible
 
     " http://items.sjbach.com/319/configuring-vim-right
     " scroll viewpoint by 'n' lines
-    nnoremap <C-j> 5<C-e>
+    nnoremap <C-j> 5<C-e> " TODO: not working
     nnoremap <C-k> 5<C-y>
 
     " Increase/Decrease: <C-A>/<C-X>
@@ -164,19 +164,19 @@ set nocompatible
 
     " fold
     " Tip: fold toggle: za
-    nmap <leader>fc :foldclose<CR>
-    nmap <leader>fo :foldopen<CR>
+    " nmap <leader>fc :foldclose<CR>
+    " nmap <leader>fo :foldopen<CR>
 
-    nmap <leader>f0 :set foldlevel=0<CR>
-    nmap <leader>f1 :set foldlevel=1<CR>
-    nmap <leader>f2 :set foldlevel=2<CR>
-    nmap <leader>f3 :set foldlevel=3<CR>
-    nmap <leader>f4 :set foldlevel=3<CR>
-    nmap <leader>f5 :set foldlevel=3<CR>
-    nmap <leader>f6 :set foldlevel=3<CR>
-    nmap <leader>f7 :set foldlevel=3<CR>
-    nmap <leader>f8 :set foldlevel=3<CR>
-    nmap <leader>f9 :set foldlevel=9<CR>
+    " nmap <leader>f0 :set foldlevel=0<CR>
+    " nmap <leader>f1 :set foldlevel=1<CR>
+    " nmap <leader>f2 :set foldlevel=2<CR>
+    " nmap <leader>f3 :set foldlevel=3<CR>
+    " nmap <leader>f4 :set foldlevel=3<CR>
+    " nmap <leader>f5 :set foldlevel=3<CR>
+    " nmap <leader>f6 :set foldlevel=3<CR>
+    " nmap <leader>f7 :set foldlevel=3<CR>
+    " nmap <leader>f8 :set foldlevel=3<CR>
+    " nmap <leader>f9 :set foldlevel=9<CR>
 
     " Identation {
 
@@ -992,17 +992,17 @@ set nocompatible
     " }
 
     " Perl-support {
-        let g:Perl_Root = '&Perl.'          " original
-        let g:Perl_Root = '&Plugin.&Perl.'  " mine.
+        " let g:Perl_Root = '&Perl.'          " original
+        " let g:Perl_Root = '&Plugin.&Perl.'  " mine.
 
-        let g:Perl_Support_Root_Dir        = $HOME.'/.vim/bundle/perl-support'
+        " let g:Perl_Support_Root_Dir        = $HOME.'/.vim/bundle/perl-support'
 
-        let g:Perl_GlobalTemplateFile      = '/codework/perl/templates.pl'
-        let g:Perl_LocalTemplateFile       = '/codework/perl/templates.pl'
-        let g:Perl_CodeSnippets            = '/codework/perl/snippets.pl'
-        let g:Perl_Dictionary_File         = '/codework/perl/perl.dict.txt'
-        let g:Perl_PerlModuleList          = '/codework/perl/perl.list.txt'
-        let g:Perl_PerlModuleListGenerator = '/codework/perl/perl.list.txt'
+        " let g:Perl_GlobalTemplateFile      = '/codework/perl/templates.pl'
+        " let g:Perl_LocalTemplateFile       = '/codework/perl/templates.pl'
+        " let g:Perl_CodeSnippets            = '/codework/perl/snippets.pl'
+        " let g:Perl_Dictionary_File         = '/codework/perl/perl.dict.txt'
+        " let g:Perl_PerlModuleList          = '/codework/perl/perl.list.txt'
+        " let g:Perl_PerlModuleListGenerator = '/codework/perl/perl.list.txt'
        "let g:Perl_Printheader             = "%<%f%h%m%<  %=%{strftime('%x %X')}     Page %N"
        "let g:Perl_PerlcriticSeverity      = 5
        "let g:Perl_PerlcriticVerbosity     = 5
@@ -1054,16 +1054,16 @@ set nocompatible
         " Turn it off:
         " let g:loaded_sqlutilities = 1
 
-        let g:sqlutil_align_where = 1
-        let g:sqlutil_align_comma = 1
-        let g:sqlutil_align_first_word = 1
-        let g:sqlutil_align_keyword_right = 1
-        let g:sqlutil_keyword_case = '\U'
+        " let g:sqlutil_align_where = 1
+        " let g:sqlutil_align_comma = 1
+        " let g:sqlutil_align_first_word = 1
+        " let g:sqlutil_align_keyword_right = 1
+        " let g:sqlutil_keyword_case = '\U'
 
-        " 0: do not create maps
-        let g:sqlutil_load_default_maps = 0
+        " " 0: do not create maps
+        " let g:sqlutil_load_default_maps = 0
 
-		vmap <leader>sf        <Plug>SQLU_Formatter<CR>
+		" vmap <leader>sf        <Plug>SQLU_Formatter<CR>
 		" nmap <leader>scl       <Plug>SQLU_CreateColumnList<CR>
 		" nmap <leader>scd       <Plug>SQLU_GetColumnDef<CR>
 		" nmap <leader>scdt      <Plug>SQLU_GetColumnDataType<CR>
