@@ -2,7 +2,6 @@
 "
 "   vim: set foldenable foldmarker={,} foldlevel=0 nospell:
 "   vi/vim: dot.vimrc
-"   mvf: ferreira.mv[ at ]gmail.com
 "   based on http://vi-improved.org/vimrc.php
 "
 " }
@@ -593,7 +592,7 @@ set nocompatible
     set nrformats=alpha,octal,hex   " C-A/C-X: increment/decrement
 
     " wrap {
-    set textwidth=78        " tw
+    " set textwidth=78        " tw
     set nowrap sidescroll=1         " [no] wrap long lines
     "et whichwrap=b,s,h,l,<,>,~,[,] " everything wraps
     "             | | | | | | | | |
