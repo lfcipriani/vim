@@ -990,27 +990,6 @@ set nocompatible
         "let g:openssl_timeout = 301000
     " }
 
-    " Perl-support {
-        " let g:Perl_Root = '&Perl.'          " original
-        " let g:Perl_Root = '&Plugin.&Perl.'  " mine.
-
-        " let g:Perl_Support_Root_Dir        = $HOME.'/.vim/bundle/perl-support'
-
-        " let g:Perl_GlobalTemplateFile      = '/codework/perl/templates.pl'
-        " let g:Perl_LocalTemplateFile       = '/codework/perl/templates.pl'
-        " let g:Perl_CodeSnippets            = '/codework/perl/snippets.pl'
-        " let g:Perl_Dictionary_File         = '/codework/perl/perl.dict.txt'
-        " let g:Perl_PerlModuleList          = '/codework/perl/perl.list.txt'
-        " let g:Perl_PerlModuleListGenerator = '/codework/perl/perl.list.txt'
-       "let g:Perl_Printheader             = "%<%f%h%m%<  %=%{strftime('%x %X')}     Page %N"
-       "let g:Perl_PerlcriticSeverity      = 5
-       "let g:Perl_PerlcriticVerbosity     = 5
-       "let g:Perl_PerlcriticOptions       = ""
-       "let g:Perl_PerlRegexSubstitution   = '$+'
-       "let g:Perl_MapLeader               = '\'
-
-    " }
-
     " project.vim {
         " Turn it off:
         " let loaded_project = 1
