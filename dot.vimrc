@@ -794,7 +794,7 @@ set nocompatible
         let g:alignmaps_euronumber = 1
     " }
 
-    " acp/autocomplpop {
+    " acp/autocomplpop { auto complete popup
         let g:acp_enableAtStartup        = 1
         let g:acp_mappingDriven          = 0
         let g:acp_ignorecaseOption       = 1
@@ -809,131 +809,9 @@ set nocompatible
         " map <leader>au :AcpUnlock <CR>
     " }
 
-    " autoclose.vim {
-        " Turn it off:
-        " let g:autoclose_loaded = 1
-    " }
-
-    " Bash-support {
-        let g:BASH_Root = 'B&ash.'         " original
-        let g:BASH_Root = '&Plugin.B&ash.' " mine.
-
-        let g:BASH_Support_Root_Dir        = $HOME.'/.vim/bundle/bash-support'
-
-        let g:BASH_GlobalTemplateFile      = '/codework/bash/templates'
-        let g:BASH_LocalTemplateFile       = '/codework/bash/templates'
-        let g:BASH_CodeSnippets            = '/codework/bash/snippets'
-       "let g:BASH_Dictionary_File         = '/codework/bash/bash.dict.txt'
-       "let g:BASH_MapLeader               '\'
-       "let g:BASH_Errorformat             '%f:\ line\ %l:\ %m'
-    " }
-
-    " bufexplorer {
-        " ,be / ,bv / ,bs
-        let g:bufExplorerReverseSort     = 0
-        let g:bufExplorerShowUnlisted    = 1    " Do not show unlisted buffers.
-        let g:bufExplorerSortBy          ='name'
-        let g:bufExplorerShowDirectories = 1    " Show directories.
-        let g:bufExplorerFindActive      = 0    " Do not go to active window.
-        let g:bufExplorerShowDirectories = 0    " Don't show directories.
-        let g:bufExplorerShowUnlisted    = 1    " Show unlisted buffers.
-        let g:bufExplorerSplitBelow      = 1    " Split new window below current.
-        let g:bufExplorerSplitRight      = 1    " Split right.
-    " }
-
-    " capslock.vim {
-        " Turn it off:
-        " let g:loaded_capslock = 1
-    " }
-
-    " dbext {
-    " }
-
-    " endwise.vim {
+    " endwise.vim { In Ruby, this means adding "end" after "if", "do", "def" and several other keywords
         " Turn it off:
         " let g:loaded_endwise = 1
-    " }
-
-    " fugitive.vim {
-        " Turn it off:
-        " let g:loaded_fugitive = 1
-    " }
-
-    " FuzzyFinder {
-
-        let g:fuf_modesDisable = []
-        let g:fuf_mrufile_maxItem = 400
-        let g:fuf_mrucmd_maxItem = 400
-
-        let g:fuf_fuzzyRefining = 1
-
-        map  <leader>fb   :FufBuffer          <CR>
-        map  <leader>ff   :FufFile            <CR>
-        map  <leader>fd   :FufDir             <CR>
-        map  <leader>fl   :FufLine            <CR>
-
-        map  <leader>fmc  :FufMruCmd          <CR>
-        map  <leader>fmf  :FufMruFile         <CR>
-
-        map  <leader>fh   :FufHelp            <CR>
-        map  <leader>fj   :FufJumpList        <CR>
-
-        " map  <leader>fbd  :FufBookmarkDir     <CR>
-        " map  <leader>fbf  :FufBookmarkFile    <CR>
-        " map  <leader>fbm  :FufBookmark        <CR>
-        "
-        " map  <leader>fcf  :FufCoverageFile    <CR>
-        " map  <leader>fcl  :FufChangeList      <CR>
-        " map  <leader>fq   :FufQuickfix        <CR>
-        "
-        " map  <leader>fbt  :FufBufferTag       <CR>
-        " map  <leader>ft   :FufTag             <CR>
-        " map  <leader>ftf  :FufTaggedFile      <CR>
-
-        " nnoremap <silent> sj     :FufBuffer<CR>
-        " nnoremap <silent> sk     :FufFileWithCurrentBufferDir<CR>
-        " nnoremap <silent> sK     :FufFileWithFullCwd<CR>
-        " nnoremap <silent> s<C-k> :FufFile<CR>
-        " nnoremap <silent> sl     :FufCoverageFileChange<CR>
-        " nnoremap <silent> sL     :FufCoverageFileChange<CR>
-        " nnoremap <silent> s<C-l> :FufCoverageFileRegister<CR>
-        " nnoremap <silent> sd     :FufDirWithCurrentBufferDir<CR>
-        " nnoremap <silent> sD     :FufDirWithFullCwd<CR>
-        " nnoremap <silent> s<C-d> :FufDir<CR>
-        " nnoremap <silent> sn     :FufMruFile<CR>
-        " nnoremap <silent> sN     :FufMruFileInCwd<CR>
-        " nnoremap <silent> sm     :FufMruCmd<CR>
-        " nnoremap <silent> su     :FufBookmarkFile<CR>
-        " nnoremap <silent> s<C-u> :FufBookmarkFileAdd<CR>
-        " vnoremap <silent> s<C-u> :FufBookmarkFileAddAsSelectedText<CR>
-        " nnoremap <silent> si     :FufBookmarkDir<CR>
-        " nnoremap <silent> s<C-i> :FufBookmarkDirAdd<CR>
-        " nnoremap <silent> st     :FufTag<CR>
-        " nnoremap <silent> sT     :FufTag!<CR>
-        " nnoremap <silent> s<C-]> :FufTagWithCursorWord!<CR>
-        " nnoremap <silent> s,     :FufBufferTag<CR>
-        " nnoremap <silent> s<     :FufBufferTag!<CR>
-        " vnoremap <silent> s,     :FufBufferTagWithSelectedText!<CR>
-        " vnoremap <silent> s<     :FufBufferTagWithSelectedText<CR>
-        " nnoremap <silent> sxxxw  :FufBufferTagWithCursorWord!<CR>
-        " nnoremap <silent> s.     :FufBufferTagAll<CR>
-        " nnoremap <silent> s>     :FufBufferTagAll!<CR>
-        " vnoremap <silent> s.     :FufBufferTagAllWithSelectedText!<CR>
-        " vnoremap <silent> s>     :FufBufferTagAllWithSelectedText<CR>
-        " nnoremap <silent> s]     :FufBufferTagAllWithCursorWord!<CR>
-        " nnoremap <silent> sg     :FufTaggedFile<CR>
-        " nnoremap <silent> sG     :FufTaggedFile!<CR>
-        " nnoremap <silent> so     :FufJumpList<CR>
-        " nnoremap <silent> sp     :FufChangeList<CR>
-        " nnoremap <silent> sq     :FufQuickfix<CR>
-        " nnoremap <silent> sy     :FufLine<CR>
-        " nnoremap <silent> sh     :FufHelp<CR>
-        " nnoremap <silent> se     :FufEditDataFile<CR>
-        " nnoremap <silent> sr     :FufRenewCache<CR>
-
-    " }
-
-    " increment.vim {
     " }
 
     " LargeFile {
@@ -941,19 +819,14 @@ set nocompatible
         let g:LargeFile= 200
     " }
 
-    " mark.vim {
+    " mark.vim { is written to highlight several words in different colors simultaneously.
         " Turn it off:
         " let g:loaded_mark = 1
     " }
 
-    " marks_corey.vim {
+    " marks_corey.vim { You can show your marks using number array in color, and you can delete one or all marks
         " Turn it off:
         " let g:loaded_marks_corey = 1
-    " }
-
-    " matchit.vim {
-        " Turn it off:
-        " let loaded_matchit = 1
     " }
 
     " NerdCommenter {
@@ -1011,24 +884,17 @@ set nocompatible
         let g:rails_history_size = 9
     " }
 
-    " repeat.vim {
+    " repeat.vim { Repeat.vim remaps "." in a way that plugins can tap into it
         " Turn it off:
         " let g:loaded_repeat = 1
     " }
 
-    " searchcomplete {
+    " searchcomplete { able to tab-complete words while typing in a search
         " Turn it off:
         " let loaded_search_complete = 1
     " }
 
-    " speeddating.vim {
-        " Turn it off:
-        " let g:loaded_speeddating      = 1
-        " 0: maps to <C-A>/<C-X>
-        let g:speeddating_no_mappings = 0
-    " }
-
-    " surround.vim {
+    " surround.vim { is all about "surroundings": parentheses, brackets, quotes, XML tags, and more.  The plugin provides mappings to easily delete, change and add such surroundings in pairs.
         " Turn it off:
         " let g:loaded_surround = 1
     " }
@@ -1042,16 +908,6 @@ set nocompatible
         " map <leader>t   :TlistToggle     <CR>
         " map <leader>ts  :TlistSessionSave ~/.tlistsession.vim.tag <CR>
         " map <leader>tl  :TlistSessionLoad ~/.tlistsession.vim.tag <CR>
-    " }
-
-    " textformat.vim {
-        " Turn it off:
-        " let g:loaded_textformat = 1
-    " }
-
-    " unimpaired.vim {
-        " Turn it off:
-        " let g:loaded_unimpaired = 1
     " }
 
     " Zen-Coding {
