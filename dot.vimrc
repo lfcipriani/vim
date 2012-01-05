@@ -79,7 +79,7 @@ set nocompatible
     set wildignore=*.dll,*.o,*.obj,*.bak,*.exe,*.pyc,*.jpg,*.gif,*.png,*~,*.lo
                                 " ignore these list file extensions
 
-    set grepprg=ack
+    set grepprg=ack "TODO: fix this or install ack
     set grepformat=%f:%l:%m
 
     " what to save via :mksession {
@@ -113,156 +113,13 @@ set nocompatible
     let mapleader=","
 
     " http://items.sjbach.com/319/configuring-vim-right
-    " scroll viewpoint by 'n' lines
-    nnoremap <C-j> 5<C-e> " TODO: not working
-    nnoremap <C-k> 5<C-y>
-
-    " Increase/Decrease: <C-A>/<C-X>
-    " Omni completion: <C-n>
-    " Complete whole filenames/lines with a quicker shortcut key in insert mode
-    " imap <C-F> <C-X><C-F>
-    " imap <C-L> <C-X><C-L>
-
-    " space / shift-space scroll in normal mode
-    " noremap <S-space> <C-b>
-    " noremap <space>   <C-f>
-
-    " \w => :w
-    nmap \ :
-
-    " Quick yanking to the end of the line
-    nmap Y y$
-
-    " K = inverted J: join line up
-    map K ddpkJ
-
-    " row up/down if wrap active
     " http://nvie.com/posts/how-i-boosted-my-vim/
-    nnoremap j gj
-    nnoremap k gk
-
-    " CTRL-K:  delete so the end of line
-    map  <C-K> D
-    " DOES NOT WORK
-    " imap <C-K> <ESC>D
-
-     " Yank/paste to the OS clipboard with ,y and ,p
-    " nmap <leader>y "+y
-    " nmap <leader>Y "+yy
-    " nmap <leader>p "+p
-    " nmap <leader>P "+P
-
-    " Quickly get out of insert mode without your fingers having to leave the
-    " home row (either use 'jj' or 'jk')
-    " inoremap jj <Esc>
-    " inoremap jk <Esc>
+    " See http://stevelosh.com/blog/2010/09/coming-home-to-vim
+    " Inspired by http://sphinx.pocoo.org/rest.html#sections
+    " http://vim.wikia.com/wiki/Set_working_directory_to_the_current_file
 
     " edit files
     nmap <leader>ev :e $MYVIMRC<CR>
-    nmap <leader>eg :e $MYGVIMRC<CR>
-
-    " fold
-    " Tip: fold toggle: za
-    " nmap <leader>fc :foldclose<CR>
-    " nmap <leader>fo :foldopen<CR>
-
-    " nmap <leader>f0 :set foldlevel=0<CR>
-    " nmap <leader>f1 :set foldlevel=1<CR>
-    " nmap <leader>f2 :set foldlevel=2<CR>
-    " nmap <leader>f3 :set foldlevel=3<CR>
-    " nmap <leader>f4 :set foldlevel=3<CR>
-    " nmap <leader>f5 :set foldlevel=3<CR>
-    " nmap <leader>f6 :set foldlevel=3<CR>
-    " nmap <leader>f7 :set foldlevel=3<CR>
-    " nmap <leader>f8 :set foldlevel=3<CR>
-    " nmap <leader>f9 :set foldlevel=9<CR>
-
-    " Identation {
-
-    """ Normal mode:
-    nmap <D-[> <<
-    nmap <D-]> >>
-
-    """ Visual mode - gv: keeps selection
-    vnoremap > ><CR>gv
-    vnoremap < <<CR>gv
-    vmap <D-[> <gv
-    vmap <D-]> >gv
-
-    " }
-
-    " Shortcuts
-    nmap <leader>q  :q <CR>
-    nmap <leader>q1 :q!<CR>
-    nmap <leader>w  :w <CR>
-    nmap <leader>wa :wa<CR>
-    nmap <leader>wq :wq!<CR>
-    nmap <leader>ww :w !sudo tee % >/dev/null
-    nmap <leader>sa :browse confirm saveas<CR>
-
-"   cmap w!! w !sudo tee % >/dev/null
-
-    " linenumber on/off
-    nmap <leader>nu  :set invnumber<CR>
-    " relativenumber on/off
-    nmap <leader>rnu :set invrnu   <CR>
-    " set cursorcolumn/nocursorcolumn
-    nmap <leader>cuc :set invcuc   <CR>
-    " Highlight search on/off
-    nmap <leader>h :set invhls<CR>
-    " list invisibles on/off
-    nmap <leader>l :set invlist  <CR>
-
-    " CTRL-S for saving, also in Insert mode
-    "noremap  <C-S>        :update<CR>
-    "vnoremap <C-S>    <C-C>:update<CR>
-    "inoremap <C-S>    <C-O>:update<CR>
-
-    " CTRL-A is Select all
-    "noremap <C-A> gggH<C-O>G
-    "inoremap <C-A> <C-O>gg<C-O>gH<C-O>G
-    "cnoremap <C-A> <C-C>gggH<C-O>G
-    "onoremap <C-A> <C-C>gggH<C-O>G
-    "snoremap <C-A> <C-C>gggH<C-O>G
-    "xnoremap <C-A> <C-C>ggVG
-
-    " Underline header
-    map <leader>= yypVr=
-    map <leader>- yypVr-
-
-    " Thanks to Steve Losh for this liberating tip
-    " See http://stevelosh.com/blog/2010/09/coming-home-to-vim
-    " Perl Regex
-    nnoremap / /\v
-    vnoremap / /\v
-
-    " <TAB> for matching brackets
-    nnoremap <tab> %
-    vnoremap <tab> %
-
-    " Creating underline/overline headings for markup languages
-    " Inspired by http://sphinx.pocoo.org/rest.html#sections
-    "nnoremap <leader>1 yyPVr=jyypVr=
-    "nnoremap <leader>2 yyPVr*jyypVr*
-    "nnoremap <leader>3 yypVr=
-    "nnoremap <leader>4 yypVr-
-    "nnoremap <leader>5 yypVr^
-    "nnoremap <leader>6 yypVr"
-
-   " http://vim.wikia.com/wiki/Set_working_directory_to_the_current_file
-    nmap <leader>cd :cd <C-R>=expand("%:p:h")<CR>
-
-    " Command mode: path of the currently edited file
-    " cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
-
-    " Command line map
-    cmap %/ <C-R>
-
-    " dos2,nix
-    nmap <leader>unix   :%s/\r$//     <CR>
-
-   " rot all text
-    nmap <leader>rot ggg?G
 
 " }
 
@@ -274,7 +131,6 @@ set nocompatible
     command! Q  :q
 
     command! Rehash     source $MYVIMRC
-    command! Rehashg    source $MYGVIMRC
     command! Helptags   helptags ~/.vim/doc
 
     command! Color      echo g:colors_name
@@ -347,7 +203,7 @@ set nocompatible
     map <leader>c0 :echo g:colors_name   <CR>
 
     " Terminal vim theme
-    colorscheme torte
+    colorscheme ir_black3
 
     " Gvim theme
     if has("gui_running")
@@ -407,29 +263,7 @@ set nocompatible
     set hidden                  " hide buffer instead of closing
     "et nohidden                " close buffer always
 
-    " new buffer
     " Ref: http://technotales.wordpress.com/2010/04/29/vim-splits-a-guide-to-doing-exactly-what-you-want/
-    nmap <leader>b<left>   :leftabove  vnew<CR>
-    nmap <leader>b<right>  :rightbelow vnew<CR>
-    nmap <leader>b<up>     :leftabove   new<CR>
-    nmap <leader>b<down>   :rightbelow  new<CR>
-
-    " new buffer at top 'x'
-    nmap <leader>bt<left>  :topleft    vnew<CR>
-    nmap <leader>bt<right> :botright   vnew<CR>
-    nmap <leader>bt<up>    :topleft     new<CR>
-    nmap <leader>bt<down>  :botright    new<CR>
-
-    " v2
-    nmap <leader>bh   :leftabove   vnew<CR>
-    nmap <leader>bl   :rightbelow  vnew<CR>
-    nmap <leader>bk   :leftabove    new<CR>
-    nmap <leader>bj   :rightbelow   new<CR>
-    nmap <leader>bth  :topleft     vnew<CR>
-    nmap <leader>btl  :botright    vnew<CR>
-    nmap <leader>btk  :topleft      new<CR>
-    nmap <leader>btj  :botright     new<CR>
-
 " }
 
 " Windows {
@@ -457,34 +291,6 @@ set nocompatible
     map <up>    <C-W>k
     map <left>  <C-W>h
     map <right> <C-W>l
-
-    " Shortcut: move cursor
-    map <C-J> <C-W>j
-    map <C-K> <C-W>k
-    map <C-H> <C-W>h
-    map <C-L> <C-W>l
-
-    " Shortcut: move split window to top L/R/U/D
-    nmap <leader>spJ <C-W>J
-    nmap <leader>spK <C-W>K
-    nmap <leader>spH <C-W>H
-    nmap <leader>spL <C-W>L
-
-    " split: set equal size
-    nmap <leader>sp= <C-W>=
-
-    " new split
-    " Ref: http://technotales.wordpress.com/2010/04/29/vim-splits-a-guide-to-doing-exactly-what-you-want/
-    nmap <leader>sp<left>   :leftabove  vsplit<CR>
-    nmap <leader>sp<right>  :rightbelow vsplit<CR>
-    nmap <leader>sp<up>     :leftabove  split<CR>
-    nmap <leader>sp<down>   :rightbelow split<CR>
-
-    " new split, v2
-    nmap <leader>sph        :leftabove  vsplit<CR>
-    nmap <leader>spl        :rightbelow vsplit<CR>
-    nmap <leader>spk        :leftabove  split<CR>
-    nmap <leader>spj        :rightbelow split<CR>
 
     " }
 
@@ -526,32 +332,10 @@ set nocompatible
 "    set statusline+=\ %f                               " filename
      set statusline+=\ [%t]                             " filename
 
-     if filereadable(expand("~/.vim/plugin/rails.vim"))
-         set statusline+=\ %{rails#statusline(1)}      " rails.vim
-     endif
-
-     if filereadable(expand("~/.vim/plugin/fugitive.vim"))
-         set statusline+=\ %{fugitive#statusline()}     " git branch
-     endif
-
-     if filereadable(expand("~/.vim/plugin/capslock.vim"))
-         set statusline+=\ %{CapsLockStatusline()}      " capslock.vim
-     endif
-
 "    set statusline+=%0                             " break
 "    set statusline+=asc:[%3.(%b%)\ %3.(x%B%)]      " current char (ga)
-
-"    if filereadable(expand("~/.vim/plugin/taglist.vim"))
-"        set statusline+=%(tag:[%{Tlist_Get_Tagname_By_Line()}]%)
-"    endif
-
 "    set statusline+=\ [%2.(%c%)\ lin:%-7.(%l/%L%)]\ %P
 "    set statusline+=\ [col:%2.(%c%)\ lin:%-7.(%l/%L%)]\ %P
-
-     if filereadable(expand("~/.vim/plugin/vimbuddy.vim"))
-        set statusline+=%=%{VimBuddy()} " vim buddy
-     endif
-
 "   if has("perl")
 "       set statusline+=\ perl
 "   endif
@@ -670,16 +454,6 @@ set nocompatible
         autocmd BufReadPost  *.log      normal G
     " }
 
-    " SQL*Plus {
-        autocmd BufNewFile,BufRead *sql       set filetype=plsql
-        " http://www.oracledba.ru/notes_vim_en.html
-        autocmd BufNewFile,BufRead afiedt.buf set filetype=plsql
-        "
-      " autocmd BufRead *sql set makeprg=~/bin/sql_compile_vim.sh\ %\ scott/tiger@orcl
-        autocmd BufRead *sql set errorformat=%E%l/%c%m,%C%m,%Z
-
-    " }
-
     " Makefile {
         autocmd BufRead     [Mm]akefile*    setlocal filetype=make
         autocmd FileType    automake,make   setlocal ts=8 sts=0 sw=8 noet nosta list
@@ -687,14 +461,6 @@ set nocompatible
 
     " Programming settings {
     " http://www.mattrope.com/computers/conf/vimrc.html
-    " augroup prog
-    "     au!
-    "     au BufRead *.c,*.cc,*.cpp,*.h,*.java set formatoptions=croql cindent nowrap nofoldenable
-    "     au BufEnter *.java                      map <C-Return> :w\|:!javac %<CR>
-    "     au BufEnter *.c                         map <C-Return> :w\|:!gcc %<CR>
-    "     au BufEnter *.cc,*.cpp                  map <C-Return> :w\|:!g++ %<CR>
-    "     au BufLeave *.java,*.c,*.cc             unmap <C-Return>
-    " augroup END
     " }
 
     " Mail {
@@ -748,17 +514,6 @@ set nocompatible
     nmap _$ :call Preserve("%s/\\s\\+$//e")<CR>
     nmap _= :call Preserve("normal gg=G")<CR>
 
-    " define :Lorem command to dump in a paragraph of lorem ipsum
-    " by Willa! http://github.com/willian/willvim/tree/master
-    command! -nargs=0 Lorem :normal iLorem ipsum dolor sit amet, consectetur
-            \ adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            \ magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-            \ ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-            \ irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-            \ fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            \ proident, sunt in culpa qui officia deserunt mollit anim id est
-            \ laborum
-
     "
     "   nmap <leader>id1 <C-R>=strftime("%c")
     "   nmap <leader>ifp :e <C-R>=expand("%:p:h") .'/' <C-R>
@@ -788,181 +543,6 @@ set nocompatible
 " }
 
 " Plugins {
-
-    " align, alignmaps {
-        let g:DrChipTopLvlMenu     = "Plugin."
-        let g:alignmaps_euronumber = 1
-    " }
-
-    " acp/autocomplpop { auto complete popup
-        let g:acp_enableAtStartup        = 1
-        let g:acp_mappingDriven          = 0
-        let g:acp_ignorecaseOption       = 1
-        let g:acp_behaviorKeywordLength  = 2
-        let g:acp_behaviorFileLength     = 0
-
-        let g:acp_behavior = { 'repeat': 1}
-
-        map <leader>ae :AcpEnable <CR>
-        map <leader>ad :AcpDisable <CR>
-        " map <leader>al :AcpLock <CR>
-        " map <leader>au :AcpUnlock <CR>
-    " }
-
-    " endwise.vim { In Ruby, this means adding "end" after "if", "do", "def" and several other keywords
-        " Turn it off:
-        " let g:loaded_endwise = 1
-    " }
-
-    " LargeFile {
-        " in megabytes - :Large/:Unlarge
-        let g:LargeFile= 200
-    " }
-
-    " mark.vim { is written to highlight several words in different colors simultaneously.
-        " Turn it off:
-        " let g:loaded_mark = 1
-    " }
-
-    " marks_corey.vim { You can show your marks using number array in color, and you can delete one or all marks
-        " Turn it off:
-        " let g:loaded_marks_corey = 1
-    " }
-
-    " NerdCommenter {
-        " Turn it off:
-        " let loaded_nerd_comments=1
-
-        let NERDCreateDefaultMappings = 1
-        let NERDRemoveExtraSpaces = 1
-        let NERDSpaceDelims = 1
-        let NERDMenuMode = 0
-
-    " }
-
-    " NerdTree {
-        " Turn it off:
-        " let loaded_nerd_tree=1
-
-        let NERDTreeCaseSensitiveSort = 1
-        let NERDTreeChDirMode         = 0
-        let NERDTreeIgnore            = ['\.[ao]$','\.sw?$','\.DS_Store','\.svn','\.CVS','\.git']
-        let NERDTreeMouseMode         = 2
-        let NERDTreeShowLineNumbers   = 0
-        let NERDTreeWinSize           = 35
-        let NERDTreeHijackNetrw       = 1
-
-        map <leader>d  :NERDTreeToggle <CR> " Dir tree
-        map <leader>dd :NERDTreeMirror <CR> " Dir tree
-    " }
-
-    " openssl (password safe) {
-        " ms: 15000 - 15s
-        "     30000 - 20s
-        "    300000 -  5m
-        "let g:openssl_timeout = 301000
-    " }
-
-    " project.vim {
-        " Turn it off:
-        " let loaded_project = 1
-
-        let g:proj_window_width = 40
-        let g:proj_window_increment = 20
-
-        " Default: 'imst'
-        let g:proj_flags = 'imstn'
-
-        nmap <silent> <Leader>p :Project<CR>
-
-    " }
-
-    " rails.vim {
-        " Turn it off:
-        " let g:loaded_rails = 1
-        let g:rails_menu = 1
-        let g:rails_history_size = 9
-    " }
-
-    " repeat.vim { Repeat.vim remaps "." in a way that plugins can tap into it
-        " Turn it off:
-        " let g:loaded_repeat = 1
-    " }
-
-    " searchcomplete { able to tab-complete words while typing in a search
-        " Turn it off:
-        " let loaded_search_complete = 1
-    " }
-
-    " surround.vim { is all about "surroundings": parentheses, brackets, quotes, XML tags, and more.  The plugin provides mappings to easily delete, change and add such surroundings in pairs.
-        " Turn it off:
-        " let g:loaded_surround = 1
-    " }
-
-    " taglist {
-        " let loaded_taglist = 1 " 0: activate / 1: do not load
-        " let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
-        " let Tlist_File_Fold_Auto_Close = 1
-        " let Tlist_Show_Menu = 1
-
-        " map <leader>t   :TlistToggle     <CR>
-        " map <leader>ts  :TlistSessionSave ~/.tlistsession.vim.tag <CR>
-        " map <leader>tl  :TlistSessionLoad ~/.tlistsession.vim.tag <CR>
-    " }
-
-    " Zen-Coding {
-        " Turn it off:
-        " let g:loaded_zencoding_vim = 1
-
-        let g:use_zen_complete_tag = 1
-        let g:user_zen_leader_key  = '<c-y>'
-
-        " let g:user_zen_balancetagoutward_key = 'ta'
-        " let g:user_zen_balancetaginward_key  = 'ti'
-        " let g:user_zen_prev_key              = 'p'
-        " let g:user_zen_removetag_key         = 'd'
-
-        " Default Mappings
-        " let g:user_zen_expandabbr_key         [ , ]
-        " let g:user_zen_expandword_key         [ , ]
-        " let g:user_zen_balancetagoutward_key  [ D ]
-        " let g:user_zen_balancetaginward_key   [ d ]
-        " let g:user_zen_next_key               [ n ]
-        " let g:user_zen_prev_key               [ N ]
-        " let g:user_zen_imagesize_key          [ i ]
-        " let g:user_zen_togglecomment_key      [ / ]
-        " let g:user_zen_splitjointag_key       [ j ]
-        " let g:user_zen_removetag_key          [ k ]
-        " let g:user_zen_anchorizeurl_key       [ a ]
-        " let g:user_zen_anchorizesummary_key   [ A ]
-
-        let g:user_zen_settings = {
-            \  'html' : {
-            \    'filters' : 'html, e',
-            \    'indentation' : '    '
-            \  },
-            \  'css' : {
-            \    'filters' : 'fc',
-            \    'indentation' : '  '
-            \  },
-            \  'xml' : {
-            \    'extends' : 'html',
-            \  },
-            \  'haml' : {
-            \    'extends' : 'html',
-            \  },
-            \  'php' : {
-            \    'extends' : 'html',
-            \    'filters' : 'html,c',
-            \    'indentation' : '    '
-            \  },
-            \}
-    " }
-
-    " RainbowPlugin {
-        " Turn it off:
-        " let g:loaded_Rainbow = 1
-    " }
 
 " }
 
