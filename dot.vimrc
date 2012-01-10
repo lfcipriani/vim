@@ -125,7 +125,12 @@ set nocompatible
     " http://vim.wikia.com/wiki/Set_working_directory_to_the_current_file
 
     " edit files
-    nmap <leader>ev :e $MYVIMRC<CR>
+    nmap <leader>ev :tabe $MYVIMRC<CR>
+
+    " switch buffers with control movements
+    map <c-j> :bn<cr>
+    map <c-k> :bp<cr>
+
 
 " }
 
@@ -313,6 +318,10 @@ set nocompatible
     map <leader>tm <C-W>T
     " open file under cursor to new tab: /etc/hosts
     map <leader>tf <C-W>gf
+
+    " switch tabs with control movement
+    map <c-h> :tabp<cr>
+    map <c-l> :tabn<cr>
 
 " }
 
