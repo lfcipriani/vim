@@ -131,6 +131,15 @@ set nocompatible
     map <c-k> :bn<cr>
     map <c-j> :bp<cr>
 
+    " iPad mappings {
+        if &term == "xterm-ipad"
+            nnoremap <Tab> <Esc>
+            vnoremap <Tab> <Esc>gV
+            onoremap <Tab> <Esc>
+            inoremap <Tab> <Esc>`^
+            inoremap <Leader><Tab> <Tab>
+        endif
+    " }
 
 " }
 
