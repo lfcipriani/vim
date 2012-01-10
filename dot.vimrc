@@ -131,6 +131,10 @@ set nocompatible
     map <c-k> :bn<cr>
     map <c-j> :bp<cr>
 
+    " identation in visual mode don't loose selection
+    vnoremap > ><CR>gv
+    vnoremap < <<CR>gv
+
     " iPad mappings {
         if &term == "xterm-ipad"
             nnoremap <Tab> <Esc>
