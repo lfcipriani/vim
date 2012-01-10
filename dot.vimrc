@@ -128,8 +128,8 @@ set nocompatible
     nmap <leader>ev :tabe $MYVIMRC<CR>
 
     " switch buffers with control movements
-    map <c-j> :bn<cr>
-    map <c-k> :bp<cr>
+    map <c-k> :bn<cr>
+    map <c-j> :bp<cr>
 
 
 " }
@@ -293,10 +293,6 @@ set nocompatible
     " sf[ind] /work/*/dev
     " sf[ind] /work/**/dev
 
-    nmap <leader>o   :only <CR>
-    nmap <leader>sb  :set scrollbind<CR>
-    nmap <leader>nsb :set noscrollbind<CR>
-
     " Look MA! No arrow keys in Vim!!!
     map <down>  <C-W>j
     map <up>    <C-W>k
@@ -312,10 +308,6 @@ set nocompatible
     "      :tabonly
     "      :tabf[ind]
 
-    " split buf to new tab
-    map <leader>ts :tab split<CR>
-    " move buf to new tab
-    map <leader>tm <C-W>T
     " open file under cursor to new tab: /etc/hosts
     map <leader>tf <C-W>gf
 
@@ -415,9 +407,6 @@ set nocompatible
     set foldmethod=marker       " Fold on the marker
     set foldlevel=100           " Don't autofold anything (but I can still fold manually)
     set foldopen=block,hor,mark,percent,quickfix,tag " what movements open folds
-
-    " Fold HTML tags
-    nnoremap <leader>ft Vatzf
 
     function! SimpleFoldText() " {
         return getline(v:foldstart).' '
