@@ -203,7 +203,7 @@ set nocompatible
     map <leader>c0 :echo g:colors_name   <CR>
 
     " Terminal vim theme
-    colorscheme ir_black3
+    colorscheme torte
 
     " Gvim theme
     if has("gui_running")
