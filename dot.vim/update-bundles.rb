@@ -3,19 +3,19 @@
 # Ref: http://tammersaleh.com/posts/the-modern-vim-config-with-pathogen
 # 2010/11
 
-git_bundles = [ 
-  "git://github.com/scrooloose/nerdtree.git", ### Marty Grenfell
+git_bundles = [
+  #"git://github.com/scrooloose/nerdtree.git", ### Marty Grenfell
   "git://github.com/scrooloose/nerdcommenter.git",
   # "git://github.com/scrooloose/syntastic.git",
   # "git://github.com/scrooloose/snipmate-snippets.git",
-  "git://github.com/tpope/vim-repeat.git", ### Tim Pope
-  "git://github.com/tpope/vim-surround.git",
-  "git://github.com/tpope/vim-unimpaired.git",
-  "git://github.com/tpope/vim-speeddating.git",
-  "git://github.com/tpope/vim-endwise.git",
-  "git://github.com/tpope/vim-fugitive.git",
-  "git://github.com/tpope/vim-rails.git",
-  "git://github.com/tpope/vim-ragtag.git",
+  #"git://github.com/tpope/vim-repeat.git", ### Tim Pope
+  #"git://github.com/tpope/vim-surround.git",
+  #"git://github.com/tpope/vim-unimpaired.git",
+  #"git://github.com/tpope/vim-speeddating.git",
+  #"git://github.com/tpope/vim-endwise.git",
+  #"git://github.com/tpope/vim-fugitive.git",
+  #"git://github.com/tpope/vim-rails.git",
+  #"git://github.com/tpope/vim-ragtag.git",
   # "git://github.com/tpope/vim-git.git",
   # "git://github.com/tpope/vim-haml.git",
   # "git://github.com/tpope/vim-markdown.git",
@@ -29,24 +29,24 @@ git_bundles = [
   # "git://github.com/msanders/snipmate.vim.git",
   # "git://github.com/timcharper/textile.vim.git",
   # # "git://github.com/tpope/vim-vividchalk.git", ### Colorschemes
-  "git://github.com/mileszs/ack.vim.git",
+  #"git://github.com/mileszs/ack.vim.git",
 ]
 
-hg_bundles = [ 
-  "https://bitbucket.org/ns9tks/vim-autocomplpop",
-  "https://bitbucket.org/ns9tks/vim-l9",
+hg_bundles = [
+  #"https://bitbucket.org/ns9tks/vim-autocomplpop",
+  #"https://bitbucket.org/ns9tks/vim-l9",
 # "https://bitbucket.org/ns9tks/vim-fuzzyfinder",
 ]
 
 vim_org_scripts = [
-      ["css",             "8846",   "syntax"],
-      ["nagios",          "8770",   "syntax"],
-      ["increment",       "469",    "plugin"],
-      ["vimbuddy",        "7481",   "plugin"],
-      ["indexedsearch",   "7062",   "plugin"], #
-      ["searchcomplete",  "1388",   "plugin"], #
+#      ["css",             "8846",   "syntax"],
+#      ["nagios",          "8770",   "syntax"],
+#      ["increment",       "469",    "plugin"],
+#      ["vimbuddy",        "7481",   "plugin"],
+#      ["indexedsearch",   "7062",   "plugin"], #
+#      ["searchcomplete",  "1388",   "plugin"], #
 #     ["autoclose",       "9223",   "plugin"], # ta
-      ["autoclose",       "10873",  "plugin"], # kg
+#      ["autoclose",       "10873",  "plugin"], # kg
 ]
 
 require 'fileutils'
