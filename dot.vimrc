@@ -1,6 +1,5 @@
 " Header and Notes {
 "
-"   vim: set foldenable foldmarker={,} foldlevel=0 nospell:
 "   vi/vim: dot.vimrc
 "   based on http://vi-improved.org/vimrc.php
 "
@@ -133,13 +132,11 @@ set nocompatible
     vnoremap < <<CR>gv
 
     " iPad mappings {
-        if &term == "xterm-ipad"
-            nnoremap <Tab> <Esc>
-            vnoremap <Tab> <Esc>gV
-            onoremap <Tab> <Esc>
-            inoremap <Tab> <Esc>`^
-            inoremap <Leader><Tab> <Tab>
-        endif
+    nnoremap <Tab> <Esc>
+    vnoremap <Tab> <Esc>gV
+    onoremap <Tab> <Esc>
+    inoremap <Tab> <Esc>`^
+    inoremap <Leader><Tab> <Tab>
     " }
 
 " }
@@ -247,6 +244,7 @@ set nocompatible
         set transp=4
 
         set browsedir=buffer    " open filebrowser on directory of curent buffer
+        set paste  " terminal: do the right thing when executing paste
 
         " Set font according to system
         "   Ref: http://amix.dk/vim/vimrc.html
@@ -411,19 +409,9 @@ set nocompatible
 " }
 
 " Folding {
-    set foldenable              " Turn on folding
-    set foldmarker={,}          " Fold C style code (only use this as default
-                                " if you use a high foldlevel)
-    set foldmethod=marker       " Fold on the marker
+    set nofoldenable              " Turn on folding
+    set foldmethod=indent       " Fold on the marker
     set foldlevel=100           " Don't autofold anything (but I can still fold manually)
-    set foldopen=block,hor,mark,percent,quickfix,tag " what movements open folds
-
-    function! SimpleFoldText() " {
-        return getline(v:foldstart).' '
-    endfunction " }
-
-    set foldtext=SimpleFoldText() " Custom fold text function (cleaner than default)
-
 " }
 
 " FileTypes {
@@ -566,9 +554,5 @@ set nocompatible
         hi ColorColumn    guifg=NONE        guibg=black       gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=BOLD
     endif
 
-    set paste  " terminal: do the right thing when executing paste
 " }
-
-
-" vim: set foldmarker={,} foldlevel=0 nospell:
 
