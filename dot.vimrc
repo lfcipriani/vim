@@ -418,7 +418,7 @@ set nocompatible
 
     " all files {
         " Strip white space
-        autocmd BufWritePre * :call Preserve("%s/\\s\\+$//e")
+        " autocmd BufWritePre * :call Preserve("%s/\\s\\+$//e")
 
         " Come back to last position
         autocmd BufReadPost *   if line("'\"") > 0
