@@ -169,6 +169,9 @@ set nocompatible               " be iMproved
     vnoremap > ><CR>gv
     vnoremap < <<CR>gv
 
+    " movement improvements
+    map <leader>0 ^
+
     " iPad mappings {
     nnoremap <Tab> <Esc>
     vnoremap <Tab> <Esc>gV
@@ -185,7 +188,7 @@ set nocompatible               " be iMproved
     command! WW :browse confirm saveas
     command! WQ :wq
     command! Q  :q
-
+    
     command! Rehash     source $MYVIMRC
     command! Helptags   helptags ~/.vim/doc
 
