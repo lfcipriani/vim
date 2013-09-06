@@ -17,6 +17,7 @@ set nocompatible               " be iMproved
 
  " My Bundles here:
  "
+ Bundle 'The-NERD-Commenter'
  " original repos on github
  " Bundle 'tpope/vim-fugitive'
  " Bundle 'Lokaltog/vim-easymotion'
@@ -74,6 +75,7 @@ set nocompatible               " be iMproved
 
     set nobackup                    " [donot] make backup files
     set backupdir=/tmp              " where to put backup files
+    set nowb
 
     set noswapfile                  " do not use swap files (brave mode on!)
     set directory=/tmp              " directory to place swap files in
