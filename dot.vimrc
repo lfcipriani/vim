@@ -172,12 +172,19 @@ set nocompatible               " be iMproved
     " movement improvements
     map <leader>0 ^
 
+    " Move a line of text using ALT+[jk] or Comamnd+[jk] on mac
+    nmap <leader>j mz:m+<cr>`z
+    nmap <leader>k mz:m-2<cr>`z
+    vmap <leader>j :m'>+<cr>`<my`>mzgv`yo`z
+    vmap <leader>k :m'<-2<cr>`>my`<mzgv`yo`z
+    
+    " Insert blank space above or below
+    nnoremap <leader>l :set paste<CR>m`o<Esc>``:set nopaste<CR>
+    nnoremap <leader>L :set paste<CR>m`O<Esc>``:set nopaste<CR>
+
     " iPad mappings {
-    nnoremap <Tab> <Esc>
-    vnoremap <Tab> <Esc>gV
-    onoremap <Tab> <Esc>
-    inoremap <Tab> <Esc>`^
-    inoremap <Leader><Tab> <Tab>
+    onoremap kj <Esc>
+    inoremap kj <Esc>`^
     " }
 
 " }
@@ -554,8 +561,8 @@ set nocompatible               " be iMproved
         call cursor(l, c)
     endfunction
 
-    nmap _$ :call Preserve("%s/\\s\\+$//e")<CR>
-    nmap _= :call Preserve("normal gg=G")<CR>
+    "nmap _$ :call Preserve("%s/\\s\\+$//e")<CR>
+    "nmap _= :call Preserve("normal gg=G")<CR>
 
     "
     "   nmap <leader>id1 <C-R>=strftime("%c")
