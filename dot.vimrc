@@ -523,6 +523,10 @@ set nocompatible               " be iMproved
         autocmd BufNewFile,BufRead *.notes.txt set filetype=notes
     " }
 
+    " Markdown {
+        au BufRead,BufNewFile *.md set filetype=markdown
+    " }
+
     " git.git/contrib {
     "   autocmd BufNewFile,BufRead COMMIT_EDITMSG set filetype=gitcommit
     " }
