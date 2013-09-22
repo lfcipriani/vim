@@ -264,51 +264,28 @@ set nocompatible               " be iMproved
 
 " GUI Settings {
 
-    set bg=dark
-
-    map <leader>c1 :colorscheme ir_black3<CR>
-    map <leader>c2 :colorscheme torte    <CR>
-    map <leader>c3 :colorscheme desert   <CR>
-    map <leader>c0 :echo g:colors_name   <CR>
-
-    " Terminal vim theme
-    colorscheme torte
+    syntax enable
+    set background=dark
+    colorscheme solarized
 
     " Gvim theme
     if has("gui_running")
-        if filereadable(expand("~/.vim/colors/ir_black3.vim"))
-        colorscheme ir_black3
-        endif
-
         set nocursorcolumn
         set mouse=a
         set mousehide
 
-        set guifont=Monaco:h12  " MacVim
+        set guifont=Anonymous\ Pro:h14  " MacVim
         set guiheadroom=5       " nr of pixels subtracter from screen to fit GUI
         set tabpagemax=100      " tpm: max nro of tab windows
         set gtl=%t gtt=%F       " guitablabel/guitabtooltip
 
-        set colorcolumn=+1,+2,+3,+4,+5
+        set colorcolumn=+1,+2,+3
         set columns=178
         set lines=44
-        set transp=4
+        "set transp=4
 
         set browsedir=buffer    " open filebrowser on directory of curent buffer
-        set paste  " terminal: do the right thing when executing paste
-
-        " Set font according to system
-        "   Ref: http://amix.dk/vim/vimrc.html
-        " if MySys() == "mac"
-        "     set gfn=Menlo:h14
-        "     set shell=/bin/bash
-        " elseif MySys() == "windows"
-        "     set gfn=Bitstream\ Vera\ Sans\ Mono:h10
-        " elseif MySys() == "linux"
-        "     set gfn=Monospace\ 10
-        "     set shell=/bin/bash
-        " endif
-
+        " set paste  " terminal: do the right thing when executing paste
     endif
 
     " Terminal has 256 colors
