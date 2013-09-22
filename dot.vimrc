@@ -18,6 +18,8 @@ set nocompatible               " be iMproved
  " My Bundles here:
  "
  Bundle 'The-NERD-Commenter'
+ Bundle 'bling/vim-airline'
+ Bundle 'airblade/vim-gitgutter'
  " original repos on github
  " Bundle 'tpope/vim-fugitive'
  " Bundle 'Lokaltog/vim-easymotion'
