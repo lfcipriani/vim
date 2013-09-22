@@ -20,6 +20,7 @@ set nocompatible               " be iMproved
  Bundle 'The-NERD-Commenter'
  Bundle 'bling/vim-airline'
  Bundle 'airblade/vim-gitgutter'
+ Bundle 'rking/ag.vim'
  " original repos on github
  " Bundle 'tpope/vim-fugitive'
  " Bundle 'Lokaltog/vim-easymotion'
