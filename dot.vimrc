@@ -8,19 +8,19 @@
 set nocompatible               " be iMproved
  filetype off                   " required!
 
- set rtp+=~/.vim/bundle/vundle/
- call vundle#rc()
+ set rtp+=~/.vim/bundle/Vundle.vim
+ call vundle#begin()
 
  " let Vundle manage Vundle
  " required! 
- Bundle 'gmarik/vundle'
+ Plugin 'VundleVim/Vundle.vim'
 
  " My Bundles here:
  "
- Bundle 'The-NERD-Commenter'
- Bundle 'bling/vim-airline'
- Bundle 'airblade/vim-gitgutter'
- Bundle 'rking/ag.vim'
+ Plugin 'The-NERD-Commenter'
+ Plugin 'bling/vim-airline'
+ Plugin 'airblade/vim-gitgutter'
+ Plugin 'rking/ag.vim'
  " original repos on github
  " Bundle 'tpope/vim-fugitive'
  " Bundle 'Lokaltog/vim-easymotion'
@@ -35,6 +35,7 @@ set nocompatible               " be iMproved
  " Bundle 'file:///Users/gmarik/path/to/plugin'
  " ...
 
+ call vundle#end()
  filetype plugin indent on     " required!
  "
  " Brief help
