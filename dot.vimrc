@@ -20,7 +20,7 @@ set nocompatible               " be iMproved
  Plugin 'The-NERD-Commenter'
  Plugin 'bling/vim-airline'
  Plugin 'airblade/vim-gitgutter'
- Plugin 'rking/ag.vim'
+ Plugin 'mileszs/ack.vim'
  " original repos on github
  " Bundle 'tpope/vim-fugitive'
  " Bundle 'Lokaltog/vim-easymotion'
@@ -267,7 +267,7 @@ set nocompatible               " be iMproved
 
     syntax enable
     set background=dark
-    colorscheme solarized
+    colorscheme ir_black3
 
     " Gvim theme
     if has("gui_running")
