@@ -20,7 +20,7 @@ set nocompatible               " be iMproved
  Plugin 'The-NERD-Commenter'
  Plugin 'bling/vim-airline'
  Plugin 'airblade/vim-gitgutter'
- Plugin 'rking/ag.vim'
+ Plugin 'mileszs/ack.vim'
  " original repos on github
  " Bundle 'tpope/vim-fugitive'
  " Bundle 'Lokaltog/vim-easymotion'
@@ -275,7 +275,7 @@ set nocompatible               " be iMproved
         set mouse=a
         set mousehide
 
-        set guifont=Anonymous\ Pro:h14  " MacVim
+        "set guifont=Anonymous\ Pro:h14  " MacVim
         set guiheadroom=5       " nr of pixels subtracter from screen to fit GUI
         set tabpagemax=100      " tpm: max nro of tab windows
         set gtl=%t gtt=%F       " guitablabel/guitabtooltip
@@ -589,3 +589,5 @@ set nocompatible               " be iMproved
 
 " }
 
+source $VIMRUNTIME/mswin.vim
+behave mswin
