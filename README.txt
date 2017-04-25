@@ -6,6 +6,8 @@
 * Install Vundle (https://github.com/VundleVim/Vundle.vim)
 * Call :PluginInstall
 
+Attention: Use this repo at your own risk. The configurations are very personal.
+
 Bundle via git:
 ---------------
 
