@@ -1,4 +1,10 @@
+# Setup
 
+* pacman: gvim and gtk-engine-murrine
+* Clone your repo
+* Create symlinks for .vim and .vimrc
+* Install Vundle (https://github.com/VundleVim/Vundle.vim)
+* Call :PluginInstall
 
 Bundle via git:
 ---------------
