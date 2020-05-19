@@ -267,7 +267,7 @@ set nocompatible               " be iMproved
 
     syntax enable
     set background=dark
-    colorscheme ir_black3
+    colorscheme industry
 
     " Gvim theme
     if has("gui_running")
