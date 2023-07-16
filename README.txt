@@ -5,6 +5,7 @@
 * Create symlinks for .vim and .vimrc
 * Install Vundle (https://github.com/VundleVim/Vundle.vim)
 * Call :PluginInstall
+* Have fun
 
 Attention: Use this repo at your own risk. The configurations are very personal.
 
